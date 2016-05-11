@@ -1,3 +1,4 @@
 ---
 # defaults file for sa-brackets-io
   brackets_io_version: 1.6
+  deploy_user: "{{ansible_user_id}}"
