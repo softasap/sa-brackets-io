@@ -1,5 +1,12 @@
 ---
-- hosts: localhost
-  remote_user: root
+- hosts: all
   roles:
-    - sa-teamcity
+    - {
+        role: "role_under_test",
+        docker_test: true,
+
+        option_install_nodejs: true,
+        swaggerui_version: 2.1.4,
+        install_dir: /var/www/swagger,
+        nodejs_version: "4.x"
+      }
